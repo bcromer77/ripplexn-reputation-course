@@ -12,7 +12,7 @@ st.write("---")
 
 # Navigation
 section = st.sidebar.radio("Course Navigation", [
-    "Dashboard Overview", 
+    "Founder Overview", 
     "Introduction", 
     "I Need an Audience", 
     "I Have an Audience", 
