@@ -61,12 +61,17 @@ elif section == "Other Voices Speaking":
 elif section == "Entry-Level Products":
     st.header("Entry-Level Products for Customer Acquisition")
     st.write("These products are designed to lower the barrier to entry and provide value to new customers.")
+    
     st.write("**$49 FTC/SEC Disclosure Training** - Ensures influencers meet regulatory standards.")
     st.write("**$75 Trend Analysis Report** - Provides 100 hours of curated insights on current trends.")
     st.write("**$199 Risk & Strategy Support** - Choose between an influencer background check or a customized listening strategy.")
+    
+    # Links to external resources and the other Streamlit app
     st.markdown("[FTC/SEC Disclosure Training](https://example.com/training)")
     st.markdown("[Trend Analysis](https://example.com/trend-analysis)")
-    st.markdown("[Risk & Strategy Support](https://example.com/risk-strategy)")
+    
+    # Link to your other Streamlit app for Risk Trend Analysis
+    st.markdown("[Risk & Strategy Support](https://greenwash-mcxwqdm5nnfqvpcmntmev4.streamlit.app/)")
 
 elif section == "Advanced Options":
     st.header("Advanced Options for Sophisticated Buyers")
