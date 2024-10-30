@@ -85,4 +85,45 @@ elif section == "Course Structure":
     st.write("""
     All RippleXp courses are founded on three core tenets:
     
-    - **Principle (The Art of Story):** Understand
+    - **Principle (The Art of Story):** Understand storytelling's aesthetics and narrative theory.
+    - **Design Model (The Craft of Story):** Learn the building blocks and frameworks that make storytelling effective.
+    - **Trade Exemplar (The Exemplars):** Real-world applications and case studies from brands like Apple and Nike.
+    
+    **Our Learning Philosophy**: "Learn by Knowing" first—master the theory, then move to practice. This approach avoids the pitfalls 
+    of "Learning by Doing" without context, ensuring that your team learns how to execute narratives with precision and purpose.
+    
+    **Course Options**:
+    - Free Trial: A complimentary one-hour introduction to the art of story.
+    - Single Session: €149/hour for focused training.
+    - Three-Session Bundle: €399, covering core storytelling essentials.
+    - Full Immersion (3 Days): €2999 for groups up to 10, delivered on-site, virtually, or at our learning space in Lisbon.
+    """)
+
+elif section == "RippleXp + RippleXn Integration":
+    st.title("Seamlessly Transition from Storytelling to Social Listening with RippleXn")
+    st.write("""
+    RippleXp’s storytelling framework is just the beginning. After empowering brands with narrative control, 
+    RippleXn takes it a step further by actively listening to social video channels, spotting potential issues, 
+    and keeping you ahead of any threats. Here’s how RippleXp leads into RippleXn:
+    """)
+    
+    st.subheader("1. Detecting Brand Risk Early")
+    st.write("Use storytelling as a proactive approach, then leverage RippleXn’s listening tools to continuously monitor for signs of emerging risks.")
+    
+    st.subheader("2. Consistent Compliance Monitoring")
+    st.write("FTC/SEC compliance training prepares influencers; RippleXn’s platform verifies that they adhere to guidelines in real-time.")
+    
+    st.subheader("3. Crisis Prevention and Management")
+    st.write("RippleXp preps your team for crises. RippleXn helps you detect the warning signs early and respond before a small issue becomes a public scandal.")
+    
+    st.subheader("4. Enhancing Brand Engagement through Listening")
+    st.write("RippleXp equips your brand to tell compelling stories; RippleXn ensures those stories reach the right audience and receive the right response.")
+    
+elif section == "Contact Us":
+    st.title("Contact RippleXp to Safeguard Your Brand")
+    st.write("Reach out to discuss your brand’s needs, set up a free consultation, or request a customized storytelling and social listening strategy.")
+    st.write("Visit our [RippleXn website](https://ripplexn.com) to learn more about our social video listening platform.")
+
+# Footer for context
+st.write("---")
+st.write("Learn how RippleXp can protect and amplify your brand’s reputation through the power of storytelling.")
