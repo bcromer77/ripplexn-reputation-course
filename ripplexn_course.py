@@ -1,70 +1,85 @@
 import streamlit as st
 
 # Page configuration
-st.set_page_config(page_title="RippleXp - Storytelling for Social Listening", layout="wide")
+st.set_page_config(page_title="RippleXp - Storytelling & Social Listening", layout="wide")
 
 # Sidebar Navigation
-st.sidebar.title("RippleXp Offerings")
+st.sidebar.title("RippleXp: Protecting Your Brand")
 section = st.sidebar.radio("Navigate to:", [
-    "Introduction to RippleXp",
-    "Focus Areas",
-    "Entry-Level Products",
-    "Advanced Options",
-    "Additional Resources"
+    "Overview",
+    "Why Storytelling Matters",
+    "RippleXp Courses",
+    "RippleXp + RippleXn Integration",
+    "Contact Us"
 ])
 
 # Main Content Area
-if section == "Introduction to RippleXp":
-    st.title("RippleXp - Using Storytelling to Sell Social Video Listening")
+if section == "Overview":
+    st.title("RippleXp - The Art of Storytelling to Shield Your Reputation")
     st.write("""
-    RippleXp is designed to use storytelling as a tool to help brands not only ‘listen’ but also engage meaningfully with audiences.
-    In the world of RippleXn, reputation is a mosaic of countless individual stories. Every brand’s narrative is shaped by these
-    stories, and our goal is to empower brands to navigate this listening landscape effectively.
+    RippleXp empowers brands to proactively safeguard their reputation through storytelling and listening.
+    In today’s social media landscape, every misstep is a potential risk to brand reputation. By equipping brands 
+    with the tools to shape and monitor their narrative, RippleXp ensures brands stay protected.
     """)
 
-elif section == "Focus Areas":
-    st.title("RippleXp Focus Areas")
+elif section == "Why Storytelling Matters":
+    st.title("Why Storytelling Matters for Your Brand’s Safety")
     st.write("""
-    To help brands succeed, we’ve identified four focus areas aligned with RippleXn’s core goals:
-    """)
-    st.subheader("1. No Audience Yet")
-    st.write("**Objective**: Find listeners. We offer trend analysis to help identify emerging topics.")
+    Brands today face unprecedented scrutiny. Social media makes it easy for narratives to spiral out of control,
+    potentially harming brand reputation. RippleXp’s storytelling framework is designed to help you:
+    - **Control Your Narrative:** Avoid reputation-damaging incidents by mastering proactive storytelling.
+    - **Identify Potential Risks:** Understand what audiences care about to predict risks before they escalate.
+    - **Engage Authentically:** Build trust by telling real, compelling stories that resonate with your audience.
     
-    st.subheader("2. Existing Audience")
-    st.write("**Objective**: Understand audience interests. RippleXn’s competitor insights reveal what other brands your audience follows.")
+    **Bottom Line:** A brand’s reputation is too valuable to leave unprotected. RippleXp is your defense.
+    """)
+
+elif section == "RippleXp Courses":
+    st.title("RippleXp Courses: Empower Your Team to Protect Your Reputation")
+    st.write("""
+    Each course is designed to build a foundation for recognizing and mitigating potential reputation threats:
+    """)
+    st.subheader("1. Reputation Story")
+    st.write("Focus: Helping your team understand how audiences perceive your brand.")
+    st.markdown("**Outcome:** Equip your brand to proactively shape perceptions and mitigate misunderstandings.")
+
+    st.subheader("2. Reputation Rhetoric")
+    st.write("Focus: Balancing persuasion with authenticity to prevent backlash.")
+    st.markdown("**Outcome:** Train your influencers to represent your brand without triggering regulatory issues.")
+
+    st.subheader("3. Comeback Story (Crisis Navigation)")
+    st.write("Focus: Using storytelling to navigate and recover from potential crises.")
+    st.markdown("**Outcome:** Strengthen your brand's resilience by planning your response in advance.")
+
+    st.subheader("4. Evolution Story")
+    st.write("Focus: Evolving your narrative as your brand grows.")
+    st.markdown("**Outcome:** Keep your brand’s story fresh and aligned with current market trends.")
+
+elif section == "RippleXp + RippleXn Integration":
+    st.title("Seamlessly Transition from Storytelling to Social Listening with RippleXn")
+    st.write("""
+    RippleXp’s storytelling framework is just the beginning. After empowering brands with narrative control, 
+    RippleXn takes it a step further by actively listening to social video channels, spotting potential issues, 
+    and keeping you ahead of any threats. Here’s how RippleXp leads into RippleXn:
+    """)
     
-    st.subheader("3. Lost Audience (Crisis Management)")
-    st.write("**Objective**: Crisis response. Real-time insights help brands like Pepsi implement recovery strategies.")
+    st.subheader("1. Detecting Brand Risk Early")
+    st.write("Use storytelling as a proactive approach, then leverage RippleXn’s listening tools to continuously monitor for signs of emerging risks.")
     
-    st.subheader("4. Other Voices Speaking")
-    st.write("**Objective**: Influence alignment. Equip influencers with the training needed to represent brands effectively.")
+    st.subheader("2. Consistent Compliance Monitoring")
+    st.write("FTC/SEC compliance training prepares influencers; RippleXn’s platform verifies that they adhere to guidelines in real-time.")
+    
+    st.subheader("3. Crisis Prevention and Management")
+    st.write("RippleXp preps your team for crises. RippleXn helps you detect the warning signs early and respond before a small issue becomes a public scandal.")
+    
+    st.subheader("4. Enhancing Brand Engagement through Listening")
+    st.write("RippleXp equips your brand to tell compelling stories; RippleXn ensures those stories reach the right audience and receive the right response.")
+    
+elif section == "Contact Us":
+    st.title("Contact RippleXp to Safeguard Your Brand")
+    st.write("Reach out to discuss your brand’s needs, set up a free consultation, or request a customized storytelling and social listening strategy.")
+    st.write("Visit our [RippleXn website](https://ripplexn.com) to learn more about our social video listening platform.")
 
-elif section == "Entry-Level Products":
-    st.title("RippleXp Entry-Level Products for Customer Acquisition")
-    st.write("""
-    These products are designed to lower the barrier to entry, allowing new clients to experience the RippleXn ecosystem.
-    """)
-    st.markdown("**$49 FTC/SEC Disclosure Training** - Ensures influencers meet regulatory standards. Ideal for compliance-conscious brands.")
-    st.markdown("**$75 Trend Analysis** - Provides 100 hours of curated video insights to identify emerging trends.")
-    st.markdown("**$199 Risk & Strategy Support** - Choice of influencer background checks or custom listening strategies.")
-
-elif section == "Advanced Options":
-    st.title("RippleXp Advanced Offerings for Engaged Buyers")
-    st.write("""
-    For clients ready to go further, we offer in-depth courses and tools:
-    """)
-    st.markdown("**Storytelling Courses** - Enhances narrative skills and crisis response insights.")
-    st.markdown("**Social Video Alerts** - Real-time monitoring for risks like greenwashing, crypto-promotions, and crisis prevention.")
-
-elif section == "Additional Resources":
-    st.title("Additional Resources and Strategy Guides")
-    st.write("""
-    Explore strategic resources to see how RippleXp can address key brand concerns and regulatory challenges:
-    """)
-    st.markdown("- **Strategy Guide**: Using reputational tools to generate leads.")
-    st.markdown("- **Exposure Case Studies**: Detailed examples of how RippleXn can address specific brand vulnerabilities.")
-    st.markdown("- **Verification Tools**: $49 compliance training to prevent influencer-related backlash.")
-
-# Footer for context and contact
+# Footer for context
 st.write("---")
-st.write("Contact RippleXp for more details or to discuss custom solutions tailored to your brand's needs.")
+st.write("Learn how RippleXp can protect and amplify your brand’s reputation through the power of storytelling.")
