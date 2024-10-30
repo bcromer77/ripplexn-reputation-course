@@ -1,91 +1,70 @@
 import streamlit as st
 
-# Set up page configuration
-st.set_page_config(page_title="RippleXn Storytelling Experience", layout="wide")
+# Page configuration
+st.set_page_config(page_title="RippleXp - Storytelling for Social Listening", layout="wide")
 
-# Sidebar for main navigation
-st.sidebar.title("Course Navigation")
-course = st.sidebar.radio("Choose a course:", [
-    "Free Trial: The Art of Storytelling",
-    "Core Course: The Art of Story",
-    "Core Course: Story Design",
-    "Core Course: Story Deployment",
-    "Immersive Experience: Forum Environment"
+# Sidebar Navigation
+st.sidebar.title("RippleXp Offerings")
+section = st.sidebar.radio("Navigate to:", [
+    "Introduction to RippleXp",
+    "Focus Areas",
+    "Entry-Level Products",
+    "Advanced Options",
+    "Additional Resources"
 ])
 
-# Two-column layout for the main content and additional info
-left_column, right_column = st.columns([2, 1])
-
-# Main content based on selected course
-with left_column:
-    if course == "Free Trial: The Art of Storytelling":
-        st.title("Free Trial: The Art of Storytelling")
-        st.write("""
-        **Experience the power of storytelling in an introductory session.**
-        
-        Learn the basics of storytelling and rhetoric in this free one-hour session. This is your opportunity
-        to see how the art of story can transform your brand’s connection with its audience.
-        """)
-        st.button("Start Free Trial")
-    
-    elif course == "Core Course: The Art of Story":
-        st.title("The Art of Story")
-        st.write("""
-        **Principle** - Learn the aesthetics of impactful storytelling. This course focuses on the dramatic narrative
-        and how to captivate your audience right from the start.
-        """)
-        st.progress(25)  # Progress bar example
-        st.button("Continue to Story Design")
-
-    elif course == "Core Course: Story Design":
-        st.title("Story Design")
-        st.write("""
-        **Model** - Dive into the poetics of storytelling. This course builds on the aesthetics by introducing
-        the structural elements that make stories memorable and persuasive.
-        """)
-        st.progress(50)
-        st.button("Continue to Story Deployment")
-
-    elif course == "Core Course: Story Deployment":
-        st.title("Story Deployment")
-        st.write("""
-        **Execution** - Bringing theory into practice. Learn to deploy stories as compelling content
-        that shapes conversations and resonates with audiences.
-        """)
-        st.progress(75)
-        st.button("Proceed to Forum Environment")
-
-    elif course == "Immersive Experience: Forum Environment":
-        st.title("Forum Environment")
-        st.write("""
-        **Immersive Experience** - Participate in a 3-day forum with your team, designed for deep learning
-        and practical application. Ideal for brands ready to embed storytelling at the cultural level.
-        """)
-        st.progress(100)
-        st.button("Contact Us to Schedule")
-
-# Right column with commercial information
-with right_column:
-    st.header("Course Structure")
+# Main Content Area
+if section == "Introduction to RippleXp":
+    st.title("RippleXp - Using Storytelling to Sell Social Video Listening")
     st.write("""
-    **Core Tenets**: Principle, Design Model, Trade Exemplar
-    
-    Our approach combines aesthetics, structure, and execution. Each level builds a foundation to ensure
-    stories are crafted with purpose, from initial concept to audience connection.
+    RippleXp is designed to use storytelling as a tool to help brands not only ‘listen’ but also engage meaningfully with audiences.
+    In the world of RippleXn, reputation is a mosaic of countless individual stories. Every brand’s narrative is shaped by these
+    stories, and our goal is to empower brands to navigate this listening landscape effectively.
     """)
 
-    st.header("Pricing")
+elif section == "Focus Areas":
+    st.title("RippleXp Focus Areas")
     st.write("""
-    - **Free Trial**: 1 Hour Intro
-    - **Single Session**: €149/hour
-    - **Three-Session Bundle**: €399
-    - **Full Immersion (3 Days)**: €2999 for groups up to 10
+    To help brands succeed, we’ve identified four focus areas aligned with RippleXn’s core goals:
     """)
+    st.subheader("1. No Audience Yet")
+    st.write("**Objective**: Find listeners. We offer trend analysis to help identify emerging topics.")
+    
+    st.subheader("2. Existing Audience")
+    st.write("**Objective**: Understand audience interests. RippleXn’s competitor insights reveal what other brands your audience follows.")
+    
+    st.subheader("3. Lost Audience (Crisis Management)")
+    st.write("**Objective**: Crisis response. Real-time insights help brands like Pepsi implement recovery strategies.")
+    
+    st.subheader("4. Other Voices Speaking")
+    st.write("**Objective**: Influence alignment. Equip influencers with the training needed to represent brands effectively.")
 
-    st.header("Scheduling Options")
-    st.write("Each course is available on-site, virtually, or at our Lisbon learning space.")
+elif section == "Entry-Level Products":
+    st.title("RippleXp Entry-Level Products for Customer Acquisition")
+    st.write("""
+    These products are designed to lower the barrier to entry, allowing new clients to experience the RippleXn ecosystem.
+    """)
+    st.markdown("**$49 FTC/SEC Disclosure Training** - Ensures influencers meet regulatory standards. Ideal for compliance-conscious brands.")
+    st.markdown("**$75 Trend Analysis** - Provides 100 hours of curated video insights to identify emerging trends.")
+    st.markdown("**$199 Risk & Strategy Support** - Choice of influencer background checks or custom listening strategies.")
 
-# Footer for testimonials
+elif section == "Advanced Options":
+    st.title("RippleXp Advanced Offerings for Engaged Buyers")
+    st.write("""
+    For clients ready to go further, we offer in-depth courses and tools:
+    """)
+    st.markdown("**Storytelling Courses** - Enhances narrative skills and crisis response insights.")
+    st.markdown("**Social Video Alerts** - Real-time monitoring for risks like greenwashing, crypto-promotions, and crisis prevention.")
+
+elif section == "Additional Resources":
+    st.title("Additional Resources and Strategy Guides")
+    st.write("""
+    Explore strategic resources to see how RippleXp can address key brand concerns and regulatory challenges:
+    """)
+    st.markdown("- **Strategy Guide**: Using reputational tools to generate leads.")
+    st.markdown("- **Exposure Case Studies**: Detailed examples of how RippleXn can address specific brand vulnerabilities.")
+    st.markdown("- **Verification Tools**: $49 compliance training to prevent influencer-related backlash.")
+
+# Footer for context and contact
 st.write("---")
-st.write("**Testimonials**")
-st.write("Apple, Nike, and other iconic brands have transformed through storytelling. See the change for yourself.")
+st.write("Contact RippleXp for more details or to discuss custom solutions tailored to your brand's needs.")
