@@ -1,124 +1,91 @@
 import streamlit as st
 
 # Set up page configuration
-st.set_page_config(page_title="RippleXn Reputation Course", layout="wide")
+st.set_page_config(page_title="RippleXn Storytelling Experience", layout="wide")
 
-# Sidebar for navigation
-st.sidebar.title("RippleXn Navigation")
-section = st.sidebar.radio("Select a section:", [
-    "Introduction",
-    "I Need an Audience",
-    "I Have an Audience",
-    "Lost Audience (Crisis Management)",
-    "Other Voices Speaking",
-    "Entry-Level Products",
-    "Advanced Options",
-    "Course Assessment"
+# Sidebar for main navigation
+st.sidebar.title("Course Navigation")
+course = st.sidebar.radio("Choose a course:", [
+    "Free Trial: The Art of Storytelling",
+    "Core Course: The Art of Story",
+    "Core Course: Story Design",
+    "Core Course: Story Deployment",
+    "Immersive Experience: Forum Environment"
 ])
 
-# Two-column layout
+# Two-column layout for the main content and additional info
 left_column, right_column = st.columns([2, 1])
 
-# Right column for educational philosophy
-with right_column:
-    st.header("Educational Philosophy")
-    st.write("""
-    All courses are founded on the three core tenets of **principle, design model,** and **trade exemplar**.
-    Essentially, the principle of **dramatic narrative** - its aesthetics - followed by the building blocks
-    - its poetics - followed by its manifestation as content and conversation - its prosody.
+# Main content based on selected course
+with left_column:
+    if course == "Free Trial: The Art of Storytelling":
+        st.title("Free Trial: The Art of Storytelling")
+        st.write("""
+        **Experience the power of storytelling in an introductory session.**
+        
+        Learn the basics of storytelling and rhetoric in this free one-hour session. This is your opportunity
+        to see how the art of story can transform your brand’s connection with its audience.
+        """)
+        st.button("Start Free Trial")
     
-    This approach short circuits the **Learning by Doing** method all too often deployed in business, 
-    a method which fails to understand the theory before the practice. One can learn by doing - and 
-    continue to do it badly.
+    elif course == "Core Course: The Art of Story":
+        st.title("The Art of Story")
+        st.write("""
+        **Principle** - Learn the aesthetics of impactful storytelling. This course focuses on the dramatic narrative
+        and how to captivate your audience right from the start.
+        """)
+        st.progress(25)  # Progress bar example
+        st.button("Continue to Story Design")
 
-    Our educational philosophy is that one should **Learn by Knowing first**. First comes the knowledge -
-    the **art of story**. Then comes the design - the **craft of story**. And only then the execution - 
-    the **exemplars**.
+    elif course == "Core Course: Story Design":
+        st.title("Story Design")
+        st.write("""
+        **Model** - Dive into the poetics of storytelling. This course builds on the aesthetics by introducing
+        the structural elements that make stories memorable and persuasive.
+        """)
+        st.progress(50)
+        st.button("Continue to Story Deployment")
+
+    elif course == "Core Course: Story Deployment":
+        st.title("Story Deployment")
+        st.write("""
+        **Execution** - Bringing theory into practice. Learn to deploy stories as compelling content
+        that shapes conversations and resonates with audiences.
+        """)
+        st.progress(75)
+        st.button("Proceed to Forum Environment")
+
+    elif course == "Immersive Experience: Forum Environment":
+        st.title("Forum Environment")
+        st.write("""
+        **Immersive Experience** - Participate in a 3-day forum with your team, designed for deep learning
+        and practical application. Ideal for brands ready to embed storytelling at the cultural level.
+        """)
+        st.progress(100)
+        st.button("Contact Us to Schedule")
+
+# Right column with commercial information
+with right_column:
+    st.header("Course Structure")
+    st.write("""
+    **Core Tenets**: Principle, Design Model, Trade Exemplar
+    
+    Our approach combines aesthetics, structure, and execution. Each level builds a foundation to ensure
+    stories are crafted with purpose, from initial concept to audience connection.
     """)
 
-# Main content based on sidebar selection
-with left_column:
-    if section == "Introduction":
-        st.title("RippleXn Reputation Course")
-        st.header("Reputation as a Mosaic")
-        st.write("""
-        In RippleXn, reputation is a mosaic—composed of hundreds of individual stories, much like a honeycomb.
-        Every brand’s narrative relies on these stories, and who’s listening to them matters. This course helps you
-        navigate the listening landscape to build a resilient brand reputation.
-        """)
+    st.header("Pricing")
+    st.write("""
+    - **Free Trial**: 1 Hour Intro
+    - **Single Session**: €149/hour
+    - **Three-Session Bundle**: €399
+    - **Full Immersion (3 Days)**: €2999 for groups up to 10
+    """)
 
-    elif section == "I Need an Audience":
-        st.header("Understanding Your Audience - I Need an Audience")
-        st.write("Focus on finding listeners to understand trends and stay relevant in the market.")
-        st.write("""
-        For brands that need to build an audience, the goal is to capture trends and leverage insights to engage potential listeners.
-        RippleXn helps by identifying what's resonating across channels and emerging topics.
-        """)
+    st.header("Scheduling Options")
+    st.write("Each course is available on-site, virtually, or at our Lisbon learning space.")
 
-    elif section == "I Have an Audience":
-        st.header("Understanding Your Audience - I Have an Audience")
-        st.write("You have listeners but need insights into what else they're paying attention to.")
-        st.write("""
-        For brands with an existing audience, RippleXn provides tools to explore competitor engagement,
-        audience interests, and topics that capture attention beyond your brand's core message.
-        """)
-
-    elif section == "Lost Audience (Crisis Management)":
-        st.header("Understanding Your Audience - Lost Audience (Crisis Management)")
-        st.write("For brands experiencing a crisis, quick recovery strategies are essential.")
-        st.write("""
-        Brands like Pepsi in times of crisis need real-time monitoring and recovery tactics.
-        RippleXn provides immediate insights and response tools to manage and rebuild audience trust.
-        """)
-
-    elif section == "Other Voices Speaking":
-        st.header("Understanding Your Audience - Other Voices Speaking")
-        st.write("Brands with influencers or advocates who need training to represent them effectively.")
-        st.write("""
-        For brands working with influencers or advocates, RippleXn offers training and monitoring tools
-        to ensure brand messaging is consistent and regulations are adhered to.
-        """)
-
-    elif section == "Entry-Level Products":
-        st.header("Entry-Level Products for Customer Acquisition")
-        st.write("These products are designed to lower the barrier to entry and provide value to new customers.")
-        st.write("**$49 FTC/SEC Disclosure Training** - Ensures influencers meet regulatory standards.")
-        st.write("**$75 Trend Analysis Report** - Provides 100 hours of curated insights on current trends.")
-        st.write("**$199 Risk & Strategy Support** - Choose between an influencer background check or a customized listening strategy.")
-        st.markdown("[FTC/SEC Disclosure Training](https://example.com/training)")
-        st.markdown("[Trend Analysis](https://example.com/trend-analysis)")
-        st.markdown("[Risk & Strategy Support](https://greenwash-mcxwqdm5nnfqvpcmntmev4.streamlit.app/)")
-
-    elif section == "Advanced Options":
-        st.header("Advanced Options for Sophisticated Buyers")
-        st.write("For clients ready to engage further, we offer advanced solutions tailored to complex needs.")
-        st.write("### Storytelling Courses")
-        st.write("Develop narrative skills and gain insights into crisis response strategies.")
-        st.write("### Social Video Alerts")
-        st.write("Receive real-time alerts to identify risks like greenwashing or crypto promotions.")
-
-    elif section == "Course Assessment":
-        st.header("Course Assessment")
-        st.write("Test your understanding with a quick quiz.")
-
-        # Simple Quiz Example
-        score = 0
-
-        question1 = st.radio("1. What does RippleXn mean by reputation as a 'mosaic'?", 
-                             ["A single brand message", "Many interconnected stories", "A perfect, unchanging image"])
-        if question1 == "Many interconnected stories":
-            score += 1
-
-        question2 = st.radio("2. Which audience type focuses on crisis recovery?", 
-                             ["I Need an Audience", "Lost Audience (Crisis Management)", "Other Voices Speaking"])
-        if question2 == "Lost Audience (Crisis Management)":
-            score += 1
-
-        st.write(f"Your score: {score}/2")
-
-        # Completion Message
-        if score == 2:
-            st.success("Congratulations! You've completed the RippleXn Reputation Course.")
-        else:
-            st.info("Keep learning to improve your understanding of brand reputation with RippleXn!")
-
+# Footer for testimonials
+st.write("---")
+st.write("**Testimonials**")
+st.write("Apple, Nike, and other iconic brands have transformed through storytelling. See the change for yourself.")
